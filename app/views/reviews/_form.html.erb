@@ -1,0 +1,5 @@
+  <%= simple_form_for [@restaurant, @review] do |f| %>
+    <%= f.input :content, label: 'Write your review', error: 'Review is mandatory'%>
+    <%= f.input :rating, label: 'Rate this restaurant', error: 'Rating is mandatory',collection: 0..5 %>
+    <%= f.button :submit, class: 'class="btn btn-primary' %>
+  <% end %>
